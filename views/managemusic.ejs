@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1 class="white-text center signin-jumbotron">Manage Music</h1>
+
+<div class="container center white">
+    <table>
+        <thead>
+          <tr>
+              <th class="center">Music Title</th>
+              <th >Update</th>
+              <th >Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% allMusic.map((music) => {%>
+          <tr>
+            <td class="black-text center"><%= music.title %></td>
+            <td><a class="waves-effect waves-light btn-small " href="/admin/music/update/<%= music._id %> "><i class="far fa-edit" ></i>Edit</a></td>
+            <td><a class="waves-effect waves-light btn-small red accent-3 " href="/admin/music/delete/<%= music._id %> "><i class="fas fa-trash"></i>Delete</a></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+            
+</div>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

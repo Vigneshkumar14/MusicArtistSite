@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Stocks.xslt"?>
+<Products>
+    <Track>
+        <Name>Mercurial Days</Name>
+        <Length>4.60</Length>
+        <Rating>5</Rating>
+        <Genere>Hard Trap</Genere>
+    </Track>
+
+    <Track>
+        <Name>Sinematic</Name>
+        <Length>3.90</Length>
+        <Rating>5</Rating>
+        <Genere>Rock</Genere>
+    </Track>
+
+    <Track>
+       <Name>One Day</Name>
+        <Length>5.00</Length>
+        <Rating>4.5</Rating>
+        <Genere>Jazz</Genere>
+    </Track>
+ <Track>
+        <Name>Good</Name>
+        <Length>5.60</Length>
+        <Rating>5</Rating>
+        <Genere>Party</Genere>
+    </Track>
+   <Track>
+        <Name>Hey its Ajax</Name>
+        <Length>5.60</Length>
+        <Rating>5</Rating>
+        <Genere>Party</Genere>
+    </Track>
+     <Track>
+        <Name>Week 10</Name>
+        <Length>5.60</Length>
+        <Rating>5</Rating>
+        <Genere>Party</Genere>
+    </Track>
+</Products>

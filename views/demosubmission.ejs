@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs') %>
+<h1 class="center white-text">Demo Submission</h1>
+<p class="center white-text">Welcome to our Demo Submission page,happy to see you here.</p>
+        
+        <p class="center white-text"><i class="material-icons tiny red-text">warning</i> Please Upload Your Track only and only if it is unique.</p>
+<div class="container center white-text">
+  <form  class="demo-form" enctype="multipart/form-data" action="/demosubmission" method="POST">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons icon-color prefix">account_box</i>
+        <input id="icon_prefix" type="text" name="fullname" class="validate">
+        <label for="icon_prefix">Name</label>
+      </div> 
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons icon-color prefix">email</i>
+
+          <input id="email" value="<%= user.username %>" type="email" name="email"class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+    <div class="row">
+    <div class="file-field col s12 input-field">
+      <div class="btn blue darken-2">
+        <span>File</span>
+        <input type="file" name="demofile" >
+      </div>
+      
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons icon-color prefix">description</i>
+
+      <textarea id="textarea" class="materialize-textarea white-text"  name="trackdescription"data-length="200"></textarea>
+      <label for="textarea">Write Something about your Track.....</label>
+    </div>
+  </div>
+  <button class="btn waves-effect blue darken-2 waves-light right" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+        
+</form>
+</div>
+ 
+
+
+
+<%- include('partials/footer.ejs') %>

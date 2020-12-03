@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<div class="signin-jumbotron">
+  <h3>Signin</h3>
+</div>
+<div class="container center adminform">
+<div class="row">
+  <form action="/signin" method="POST" class="signin-form">
+  <div class="row">
+    
+    <div class="input-field col s12">
+      <input name="username" id="email" type="email" class="validate" value="admin@test.com">
+      <label for="email">Email</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input name="password" id="password" type="password" class="validate" value="test">
+      <label for="password">Password</label>
+    </div>
+  </div>
+  <br>
+  <button class="waves-effect waves-light btn" type="submit">Login</button>
+  
+</div>
+</form>
+</div>
+<p class="a-signup"><a href="/signup" >Don't Have an Account? SignUp</a></p>
+<%- include('partials/footer') %>

@@ -1,0 +1,62 @@
+<%- include("partials/header.ejs") %> 
+
+<h1 class="center white-text signin-jumbotron">Profile</h1>
+<div class="container center">
+<div class="row">
+  
+    <form class="col s12" action="/profile/<%= user._id %>" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="First Name" id="first_name" name="first_name"type="text" value="<%= user.firstname %>" class="validate">
+          <label for="first_name">First Name</label>
+          
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" name="last_name"type="text" value="<%= user.lastname %>" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row white-text">
+        <div class="input-field col s12 white-text">
+         <input disabled value="<%= user.username %>" id="disabled" name="username" type="email" class="validate white-text">
+          <label for="disabled" class="white-text">Email</label>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="mobile" type="text" maxlength="10" name="mobile" value="<%= user.mobile %>" class="validate">
+          <label for="mobile">Mobile Number</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="age" type="number" name="age" value="<%= user.age %>" min="14" max="100" class="validate">
+          <label for="age">Age</label>
+        </div>
+        <!-- <div class="input-field col s6 white-text">
+            <!-- <input type="text" class="datepicker"> 
+            <input type="date" name="dob" class="white-text validate" id="dob" placeholder="Enter Your Date of Birth Here">
+            
+            <label for = "dob">Date of Birth</label>
+
+        </div> -->
+      </div>
+      <div class="row">
+
+        <div class="col s12 input-field">
+            <input type="text" id = "country" name="country" value="<%=user.country%>" placeholder="Enter The name of your country">
+            <label for= "country" >Country</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light center" type="submit">
+        Save
+        <i class="material-icons right">save</i>
+      </button>
+     
+    </form>
+   
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %> 

@@ -1,0 +1,56 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container ">
+  <h2 class="admin-h2 signin-jumbotron">Admin's DashBoard</h2>
+  <div class="row">
+    <div class="col s12 m4 l4 center">
+      <div class="card admin-manage">
+        <a
+          href="/admin/music/create"
+          class="waves-effect waves-light btn-large admin-button"
+          >Create Music</a
+        >
+        <br />
+
+        <a
+          href="/admin/music/manage"
+          class="waves-effect waves-light btn-large admin-button"
+          >Manage Music</a
+        >
+        <br />
+
+        <a
+          href="/admin/user/manage"
+          class="waves-effect waves-light btn-large admin-button"
+          >Manage User</a
+        > <br />
+        <!-- <a
+          href="/admin/m/manage"
+          class="waves-effect waves-light btn-large admin-button"
+          >Gallery</a
+        > -->
+        
+      </div>
+    </div>
+
+    <!-- <div class="row"> -->
+    <div class="col s12 m8 l8">
+      <div class="card admin-manage">
+        <div class="card-content white-text">
+          <h2 class="card-title center">Admin Info'</h2>
+          <h3 class="center">Name : SharanRaj</h3>
+          <h4 class="center">Total No. of Users : <%= userNumber %> </h4>
+          <h4 class="center">Total No. of Music : <%= musicNumber %> </h4>
+
+
+        </div>
+        <!-- <div class="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div> -->
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>
+<%- include('partials/footer.ejs') %>

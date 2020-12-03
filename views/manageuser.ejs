@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1 class="white-text center signin-jumbotron">Manage User</h1>
+
+<div class="container center white">
+    <table>
+        <thead>
+          <tr>
+              <th class="center">Email</th>
+              <th >Delete</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% allUser.map((user) => {%>
+          <tr>
+            <td class="black-text center"><%= user.username %></td>
+            
+            <td><a class="waves-effect waves-light btn-small red accent-3 " href="/admin/user/delete/<%= user._id %> "><i class="fas fa-trash"></i>Delete</a></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+            
+</div>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

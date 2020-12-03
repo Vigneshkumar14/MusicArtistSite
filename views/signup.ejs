@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<div class="signin-jumbotron">
+  <h3>Sign Up</h3>
+</div>
+<div class="container center adminform">
+<div class="row">
+    <form action="/signup" method="POST">
+        <!-- <div class="row">
+            <div class="input-field col s12">
+              <input name="name" id="full_name" type="text" class="validate">
+              <label for="full_name">Full Name</label>
+            </div> -->
+  <div class="row">
+    <div class="input-field col s12">
+      <input name="username" id="email" type="email" class="validate">
+      <label for="email">Email</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input name="password" id="password" type="password" class="validate">
+      <label for="password">Password</label>
+    </div>
+  </div>
+  <br>
+  <button class="waves-effect waves-light btn " type="submit">Sign Up</button>
+</form>
+</div>
+</div>
+<%- include('partials/footer') %>

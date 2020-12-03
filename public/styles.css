@@ -1,0 +1,233 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+a, a:visited {
+  color: inherit;
+}
+
+.bodybg{
+  background:#140001 !important;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 0;
+}
+.cover-video{
+  padding: 0%;
+  margin: 0%;
+  width: 98.75vw;
+  height: auto;
+  
+
+}
+.h2-home{
+  color: aliceblue;
+}
+
+
+
+/* Music */
+
+
+
+.top-music{
+  margin-top: 10%;
+}
+
+/* .cont{
+  padding: 4% !important;
+} */
+
+.card-font{
+  /* font-size: 50%; */
+    font-size: 2vw !important;
+    font-weight: bold !important;
+}
+
+
+/* signin page */
+.adminform{
+  width: 300px;
+
+}
+
+.signin-jumbotron{
+  width: 100%;
+  padding: 120px;
+  color: #fff;
+  text-align: center;
+}
+
+input{
+  color: white;
+}
+
+.a-signup{
+  color: aliceblue !important;
+  text-align: center;
+  margin-top  : 40px;
+  margin-bottom: 40px;
+
+}
+
+/* admin page */
+
+.admin-button
+{
+  margin: 30px;
+
+}
+
+.admin-manage{
+  background-color: transparent;
+  border: solid white 2px;
+  border-radius: 20px;
+}
+
+.admin-cont{
+  margin-top:100px;
+  margin-bottom: 100px;
+}
+
+.admin-text{
+  text-align: center;
+  color: #fff;
+}
+
+.admin-h2{
+  color: aliceblue;
+  text-align: center;
+  margin: 30px;
+}
+
+.createMusic{
+  background-color:#fafafa;
+  width: 50%;
+  border: #fff 0.5px solid;
+  border-radius: 10px;
+  margin-left:auto ;
+  margin-right:auto;
+  margin-bottom: 100px;
+  padding: 100px;
+  text-align: center;
+  color: black !important;
+
+}
+
+/* Social-media */
+.social-media-handle{
+  position: fixed;
+  margin-right: 1%;
+  scroll-padding-right: 2px;
+  background:#424242;
+  border-radius: 10px;
+  bottom: 10px;
+  right: 1px;
+  opacity: 0.5;
+}
+
+.smm{
+  padding: 1vh;
+  /* margin:2px;
+  padding: 3px;
+  outline:2px solid #DDD;
+  border:#a1a1a1; */
+  float:left;
+  transition: margin 0.5s ease-in-out;
+	-webkit-transition: margin 0.5s ease-in-out;
+  -moz-transition: margin 0.5s ease-in-out;
+  -o-transition: margin 0.5s ease-in-out;
+  
+}
+
+.sidenav-overlay{
+  display: none !important;
+  
+}
+
+.smm:hover {
+  cursor:pointer;
+    margin-top: 5px;
+}
+
+.footsoc{
+  margin-top: 2.5vh;
+}
+
+.hidde
+{
+  color:white;
+}
+
+.datepicker-select{
+  color: black !important;
+}
+
+/* Demo Submission */
+
+.demo-form{
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+.icon-color{
+  color: #5c6bc0;
+}
+
+/* Test Carousel  */
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+.about-photo{
+  float: center;
+  width: 50%;
+  height: auto;
+ 
+}
+.aboutphotobg{
+  margin-top: 50px;
+  
+}
+.aboutphotobg1{
+  display: block;
+  margin-top: 50px;
+}
+.textabout{
+  /* width: 50%;
+   */
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   word-spacing: 5px;
+  line-height: 1.5;
+  padding-bottom: 50px;
+  
+}
+.texth6{
+  word-spacing: 5px;
+  line-height: 1.5;
+  
+}

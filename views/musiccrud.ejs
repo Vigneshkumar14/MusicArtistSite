@@ -1,0 +1,82 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="white-text center signin-jumbotron">Create Music </h1>
+<div class="createMusic ">
+  <form enctype="multipart/form-data" action="/admin/music/create" method="POST">
+    <div class="file-field input-field ">
+      <div class="btn">
+        <span>File</span>
+        <input name="musicPoster" type="file" multiple />
+      </div>
+      <div class="file-path-wrapper">
+        <input
+          class="file-path validate black-text"
+          type="text"
+          placeholder="Upload one or more files"
+        /> 
+      </div>
+    </div>
+    <div class="input-field">
+      <input
+        placeholder="Music Title"
+        name="title"
+        id="music-title"
+        type="text"
+        class="validate black-text"
+      />
+      <label for="music-title">Title</label>
+    </div>
+    <div class="input-field">
+      <input
+        placeholder="Place Your Spotify Url Here"
+        name="spotifyLink"
+        id="spotify"
+        type="text"
+        class="validate black-text"
+      />
+      <label for="spotify">Spotify</label>
+    </div>
+    <div class="input-field">
+      <input
+        placeholder="Place Your YouTube Url Here"
+        name="youtubeLink"
+        id="youtube"
+        type="text"
+        class="validate black-text"
+      />
+      <label for="youtube">YouTube</label>
+    </div>
+    <div class="input-field">
+      <input
+        placeholder="Place Your SoundCloud Url Here"
+        name="soundcloudLink"
+        id="soundcloud"
+        type="text"
+        class="validate black-text"
+      />
+      <label for="soundcloud">SoundCloud</label>
+    </div>
+    <div class="input-field">
+      <input
+        placeholder="Place Your Apple Music Url Here"
+        name="applemusicLink"
+        id="applemusic"
+        type="text"
+        class="validate black-text"
+      />
+      <label for="applemusic">Apple Music</label>
+    </div>
+    <div class="input-field">
+<label for="releaseDate">Release Date</label>
+      <!-- <input type="text" placeholder="Enter The Release Date Here"   class="datepicker black-text"> -->
+      <input type="date" name="releaseDate" class="black-text" id="releaseDate" placeholder="Enter Your Release Date Here">
+    </div>
+    
+    <button class="btn waves-effect waves-light" type="submit">
+      Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

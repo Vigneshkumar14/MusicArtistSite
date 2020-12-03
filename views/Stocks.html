@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../public/media/Untitled-1.png" type="image/icon" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link
+      type="text/css"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link type="text/css" rel="stylesheet" href="../public/styles.css" />
+    <title>Sharan Raj</title>
+  </head>
+  <body class="grey lighten-1">
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper grey darken-4">
+            <a href="/" class="brand-logo"
+              ><img
+                src="../public/media/Untitled-1.png"
+                width="150px"
+                height="75px"
+            /></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons">menu</i></a
+            >
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/music">Music</a></li>
+              <li><a href="/video">Video</a></li>
+              <li><a href="/demosubmission">Demo Submission</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons ">account_box</i></a></li>
+            </ul>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="/signin">Signin</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li class="divider grey darken-2"></li>
+              <li class="grey darken-2"><a href="/signout" >Signout</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="/music">Music</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/demo">Demo Submission</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/signin">Signin</a></li>
+          <li><a href="/signout">Signout</a></li>
+
+
+        </ul>
+      </div>
+    </header>
+
+    <main>
+
+
+    <button class="view_btn" style="margin-left: 500px; margin-top: 70px;" type="submit" value="button" onclick="loadOfferXML()" >
+        View Deals
+        <i class="material-icons" style="font-size:large; padding-right: 3px;padding-left: 5px;">
+          shopping_cart
+        </i>
+    </button>
+    <table id="offer-table" class="offer-table"></table>
+  </main>
+
+  <footer class="page-footer black">
+      <div class="container center">
+        
+            <h5 class="white-text center">Follow Us On </h5>
+            <i class="fab fa-instagram fa-2x center footsoc"></i> <br>
+            <i class="fab fa-twitter fa-2x center footsoc"></i><br>
+            <i class="fab fa-youtube fa-2x center footsoc"></i>
+          </div>
+          <!-- <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            
+          </div> -->
+      </div>
+      <div class="footer-copyright center">
+        <div class="container ">
+        © 2020 Copyright
+        </div>
+      </div>
+    </footer>
+  
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        
+                
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+  
+  
+  <script>
+		function loadOfferXML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                displayOffersTable(this);
+              }
+            };
+            xhttp.open("GET", "./Stocks.xml", true);
+            xhttp.send();
+          }
+          function displayOffersTable(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table="<tr><th>Track Name</th>"+
+                      "<th>Length</th>"+
+                      "<th>Rating</th>"+
+                      "<th>Genere</th></tr>";
+            var x = xmlDoc.getElementsByTagName("Track");
+            for (i = 0; i <x.length; i++) { 
+              table += "<tr><td>" +
+              x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("Length")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("Rating")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("Genere")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+            }
+            document.getElementById("offer-table").innerHTML = table;
+          }
+    </script>
+  <!-- social-media-handle -->
+  
+    <div class="social-media-handle">
+        
+          <i class="fab fa-instagram fa-lg smm z-depth-1"></i>
+          <i class="fab fa-spotify fa-lg smm z-depth-1"></i>
+          <i class="fab fa-soundcloud fa-lg smm z-depth-1"></i>
+          <!-- <i class="fas fa-music fa-lg"></i> -->
+      </div>
+  </body>
+  </html>

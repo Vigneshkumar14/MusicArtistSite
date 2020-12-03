@@ -1,0 +1,68 @@
+<%- include('partials/header.ejs') %>
+
+<h1 class="white-text center signin-jumbotron">Music Videos</h1>
+
+<div class="container center white">
+    <table>
+        <thead>
+          <tr>
+              <th class="center">Music Title</th>
+              <th class="center">Youtube Link</th>
+              <th class="center">Spotify Link</th>
+              <th class="center">Release Date & Time</th>
+          </tr>
+        </thead>
+
+        <tbody> 
+            <% allMusic.map((music) => {%>
+          <tr>
+            <td class="black-text center"><%= music.title %></td>
+            <td class="black-text center"><a target="_blank" class="waves-effect waves-light btn-small " href="<%=music.youtubeLink %> ">YouTube</a></td>
+            <td class="black-text center"><a target="_blank" class="waves-effect waves-light btn-small red accent-3 " href="<%=music.spotifyLink%>">Spotify</a></td>
+            <td class="black-text center"><%= music.releaseDate %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+            
+</div>
+
+
+
+<!-- <div class="video-container">
+  <iframe
+    width="853"
+    height="480"
+    src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+    frameborder="10"
+    allowfullscreen
+  ></iframe>
+</div>
+
+
+
+Flickity HTML init
+<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+  <iframe
+    class="gallery-cell"
+    width="853"
+    height="480"
+    src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+    frameborder="10"
+    allowfullscreen
+  ></iframe>
+  <div class="gallery-cell">
+    <iframe
+      width="853"
+      height="480"
+      src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+      frameborder="10"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+</div> -->
+
+<%- include('partials/footer.ejs') %>
